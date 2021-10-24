@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+.card {
+    padding: 0 0 36px;
+    width: 90%;
+}
+.buttons {
+    margin-top: 8px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.image img {
+    object-fit: cover;
+}
+#score-display {
+    margin: 6px 0 32px;
+}
+#winning-score {
+    width: 30%;
+}
+
+@media (min-width: 576px) {
+    .card {
+        width: 75%;
+    }
+}
+@media (min-width: 768px) {
+    .card {
+        width: 60%;
+    }
+}
+@media (min-width: 992px) {
+    .card {
+        width: 50%;
+    }
+}
+@media (min-width: 1216px) {
+    .card {
+        width: 40%;
+    }
+}
