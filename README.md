@@ -14,15 +14,17 @@ Yes the code will be weird and dodgy, and best practices are all thrown outside 
 The point is not to write perfect code, but to write any code at all, and have fun along the away.
 
 # Project listing
-## Bootstrap
+## Frontend
+Projects that doesn't require a backend server
+### Bootstrap
 - **Museum of Candy**: *UNFINISHED* - Just a page to play with Bootstrap
-## HTML-CSS
+### HTML-CSS
 - **Good button**: A beautiful button IMO
 - **Pricing panel**: First attempt on responsive design
-- **Ulti-search**: A page to search in other pages. Learned how to use forms and submits without JS.
-## HTML-CSS-JS
+- **UltiSearch**: A page to search in other pages. Learned how to use forms and submits without JS.
+### HTML-CSS-JS
 - **RandomBG**: Generate random background color. Meets JS for the first time.
 - **ScoreKeeper**: Basically a score counter, first encounter with Bulma. Is somewhat responsive.
-
+## Backend
 ****
 And more is coming...

@@ -7,7 +7,7 @@ errorWarning.hidden = true; // just to be safe
 async function getBitcoinPrice() {
     const res = await axios.get("https://api.cryptonator.com/api/ticker/btc-usd");
     return res.data.ticker.price;
-};
+}
 async function getDadJoke() {
     const options = {
         headers: {
