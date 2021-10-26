@@ -5,32 +5,34 @@ const refreshBtn = document.querySelector("button");
 errorWarning.hidden = true; // just to be safe
 
 async function getBitcoinPrice() {
-    console.log("1");
     const res = await axios.get("https://api.cryptonator.com/api/ticker/btc-usd");
-    bitcoinPriceDisplay.innerText = res.data.ticker.price;
-    console.log("1 end");
-}
+    return res.data.ticker.price;
+};
 async function getDadJoke() {
-    console.log("2");
     const options = {
         headers: {
             Accept: "application/json",
         },
     };
     const res = await axios.get("https://icanhazdadjoke.com/", options);
-    dadJokeDisplay.innerText = res.data.joke;
-    console.log("2 end");
+    return res.data.joke;
+}
+
+async function showBitcoinPrice() {
+    bitcoinPriceDisplay.innerText = await getBitcoinPrice();
+}
+async function showDadJoke() {
+    dadJokeDisplay.innerText = await getDadJoke();
 }
 
 function refresh() {
     try {
-        getBitcoinPrice();
-        getDadJoke();
+        showBitcoinPrice();
+        showDadJoke();
         errorWarning.hidden = true;
     } catch (e) {
         errorWarning.hidden = false;
     }
 }
-
 refreshBtn.addEventListener("click", refresh);
 refresh();
