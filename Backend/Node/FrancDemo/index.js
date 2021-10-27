@@ -1,6 +1,7 @@
 import { franc } from "franc";
 // const langs = require("langs");
 import langs from "langs";
+import colors from "colors";
 
 let input = "";
 
@@ -24,5 +25,5 @@ if (langCode === "und") {
 }
 
 console.log(input);
-console.log(`Language code: ${langCode}`);
-console.log("Language name: " + langs.where("3", langCode)?.name);
+console.log(`Language code: ${langCode}`.green);
+console.log(("Language name: " + langs.where("3", langCode)?.name).yellow);
