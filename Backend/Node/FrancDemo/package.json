@@ -1,0 +1,16 @@
+{
+  "name": "francdemo",
+  "version": "1.0.0",
+  "description": "Demo for franc package",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "honguyenminh",
+  "license": "MIT",
+  "dependencies": {
+    "franc": "^6.0.0",
+    "langs": "^2.0.0"
+  }
+}
