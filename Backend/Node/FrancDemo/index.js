@@ -1,7 +1,6 @@
 import { franc } from "franc";
-// const langs = require("langs");
 import langs from "langs";
-import colors from "colors";
+import "colors";
 
 let input = "";
 
