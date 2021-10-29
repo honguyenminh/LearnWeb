@@ -1,0 +1,24 @@
+{
+    "name": "helloejs",
+    "version": "1.0.0",
+    "description": "Hello EJS!",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/honguyenminh/LearnWeb.git"
+    },
+    "bugs": {
+        "url": "https://github.com/honguyenminh/LearnWeb/issues"
+    },
+    "author": "honguyenminh",
+    "license": "MIT",
+    "dependencies": {
+        "colors": "^1.4.0",
+        "ejs": "^3.1.6",
+        "express": "^4.17.1"
+    }
+}
