@@ -6,10 +6,11 @@ const crypto = require("crypto");
 const app = express();
 const PORT = 3000;
 const pages = [];
+const absPath = (relPath) => path.join(__dirname, relPath);
 
 app.set("view engine", "ejs");
-// Ensure that we are using the correct views folder
-app.set("views", path.join(__dirname, "views"));
+app.set("views", absPath("views"));
+app.use(express.static(absPath("public")));
 
 pages.push("/random");
 app.get(pages[pages.length - 1], (_req, res) => {
