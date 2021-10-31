@@ -17,8 +17,16 @@ app.get(pages[pages.length - 1], (_req, res) => {
     res.render("random.ejs", { num });
 });
 
-pages.push("/r");
-app.get(pages[pages.length - 1], (req, res) => {});
+// Reddit simulator
+const redditData = require("./data.json");
+pages.push("/r/:subreddit");
+app.get(pages[pages.length - 1], (req, res) => {
+    const {subreddit} = req.params;
+    const data = redditData[subreddit];
+    if (!data)
+        res.render("not-found.ejs", { page: req.baseUrl + req.path });
+    else res.render("reddit.ejs", { ...data })
+});
 
 app.get("/", (_req, res) => {
     res.render("home.ejs", { pages });
