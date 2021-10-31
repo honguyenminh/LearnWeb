@@ -13,7 +13,11 @@
         <ul>
             <!-- List item here -->
             <% for (let page of pages) { %>
-                <li><%= page %></li>
+                <% if (page.includes(":")) { %>
+                    <li><%= page %></li>
+                <% } else { %>
+                    <li><a href="<%= page %>"><%= page %></a></li>
+                <% } %>
             <% } %>
         </ul>
     </body>
