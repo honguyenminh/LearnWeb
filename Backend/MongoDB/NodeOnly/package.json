@@ -1,0 +1,14 @@
+{
+  "name": "nodeonly",
+  "version": "1.0.0",
+  "description": "Mongoose example with pure JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "honguyenminh",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^6.0.12"
+  }
+}
