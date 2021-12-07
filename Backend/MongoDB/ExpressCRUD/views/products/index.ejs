@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All products</title>
+</head>
+<body>
+    <% if (category) { %>
+        <h1>Products in category <%= category %></h1>
+        <a href="/products">Back to all products</a>
+    <% } else { %>
+        <h1>All products</h1>
+    <% } %>
+    <a href="/products/new">Create new product</a>
+    <!-- Please don't do this, I'm using table only because I won't use CSS-->
+    <table>
+        <tbody>
+            <% products.forEach(product => { %>
+            <tr>
+                <td><%= product.name %></td>
+                <td><a href="/products/<%= product._id %>">Details</a></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
