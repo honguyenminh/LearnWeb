@@ -1,6 +1,7 @@
 # Learn the Web!
 
-Hello there. This is my personal repo to save all the code I wrote while learning the web, including practice files and some small projects (they can't really be called projects but we have to start somewhere right?).
+Hello there! *(totally not pishifat)*  
+This is my personal repo to save all the code I wrote while learning the web, including practice files and some small projects (they can't really be called projects, but we have to start somewhere, right?).
 
 Yes I was following along Colt's Web Bootcamp on Udemy, but you don't have to, FreeCodeCamp is amazing too.
 
@@ -15,7 +16,7 @@ The point is not to write perfect code, but to write any code at all, and have f
 
 # Project listing
 ## Frontend
-Projects that doesn't require a backend server
+Projects that doesn't require a backend server. Just double-click the html file basically.
 ### Bootstrap
 - **Museum of Candy**: *UNFINISHED* - Just a page to play with Bootstrap
 ### HTML-CSS
@@ -26,5 +27,9 @@ Projects that doesn't require a backend server
 - **RandomBG**: Generate random background color. Meets JS for the first time.
 - **ScoreKeeper**: Basically a score counter, first encounter with Bulma. Is somewhat responsive.
 ## Backend
+### Express
+- **Express**: A weird easter-egg express app. First encounter with Express.
+- **EJS**: Express + EJS. Finally a *(kind of?)* functional Express app.
+- **REST**: A comments app, with RESTful APIs.
 ****
 And more is coming...
