@@ -100,7 +100,7 @@ app.delete("/comments/:id", (req, res) => {
 });
 
 app.get("/", (_req, res) => {
-    res.send("REST example");
+    res.send("<h1>REST example</h1><a href='/comments'>View comments</a>");
 });
 
 // 404 not found page
