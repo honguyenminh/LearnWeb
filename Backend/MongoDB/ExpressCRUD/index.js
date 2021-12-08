@@ -65,6 +65,16 @@ app.delete("/products/:id", async (req, res) => {
     res.redirect("/products");
 });
 
+app.get("/", (req, res) => {
+    res.send("<a href='/products'>Products</a>")
+});
+
+// 404 not found page
+app.get("*", (req, res) => {
+    res.statusCode = 404;
+    res.render("not-found.ejs", { page: req.baseUrl + req.path });
+});
+
 app.listen(PORT, () => {
     console.log("Listening on port " + PORT);
 });

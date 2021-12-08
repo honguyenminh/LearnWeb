@@ -50,4 +50,12 @@ const products = [
     }
 ]
 
-Product.insertMany(products);
+async function seed() {
+    await Product.deleteMany({});
+    await Product.insertMany(products)
+}
+
+seed().then(() => {
+    console.log("Done!");
+    process.exit();
+});
