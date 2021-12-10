@@ -23,7 +23,18 @@ app.set("views", absPath("views"));
 app.use(express.static(absPath("public")));
 
 app.get("/", (req, res) => {
+    // TODO: add this page
     res.send("Hello World!");
+});
+
+app.get("/campgrounds", async (req, res) => {
+    const campgrounds = await Campground.find({});
+    res.render("campgrounds/index", { campgrounds });
+});
+
+app.get("/campgrounds/:id", async (req, res) => {
+    const campgrounds = await Campground.findById(req.query.id);
+    res.render("campgrounds/index", { campgrounds });
 });
 
 // 404 not found page
@@ -34,5 +45,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log("Server started on port 3000");
+    console.log("Server started on port 3000");
 });
