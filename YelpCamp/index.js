@@ -20,6 +20,7 @@ const absPath = (relPath) => path.join(__dirname, relPath);
 
 app.set("view engine", "ejs");
 app.set("views", absPath("views"));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(absPath("public")));
 
 app.get("/", (req, res) => {
@@ -32,9 +33,19 @@ app.get("/campgrounds", async (req, res) => {
     res.render("campgrounds/index", { campgrounds });
 });
 
+app.get("/campgrounds/new", (req, res) => {
+    res.render("campgrounds/new");
+});
+
 app.get("/campgrounds/:id", async (req, res) => {
-    const campgrounds = await Campground.findById(req.query.id);
-    res.render("campgrounds/index", { campgrounds });
+    const campground = await Campground.findById(req.params.id);
+    res.render("campgrounds/show", { campground });
+});
+
+app.post("/campgrounds", async (req, res) => {
+    const campground = new Campground(req.body.campground);
+    await campground.save();
+    res.redirect(`/campgrounds/${campground._id}`);
 });
 
 // 404 not found page
